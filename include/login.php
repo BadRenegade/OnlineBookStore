@@ -12,8 +12,10 @@
             <br>
             <input class="login_input" type="password" id="password" name="password" placeholder="Password">
             <br>
-            <input class="login_input" type="text" style="width:120px">
-            <label class="login_label">Get Code</label>
+            <input class="login_input" type="text" id="check_code" name="check_code" style="width:120px">
+            <!--<label class="login_label">Get Code</label>-->
+            <?php include("include/checkCode.php") ?>
+            <img style="margin-top:-7px; margin-left:20px" id="img_check_code" onclick="change_code()" src="http://onlinebs-maindomain.stor.sinaapp.com/checkcode.png">
             <br>
             <div style="float:left">
               <input type="checkbox">
@@ -23,9 +25,7 @@
             <br>
             <br>
             <br>
-            <input id="login_btn" type="submit">
-            Login
-            </button>
+            <input id="login_btn" type="submit" value="Login">
             <label class="login_label">No account? <a class="login_link" href="signup.php">Sign up</a></label>
           </form>
         </div>

@@ -30,6 +30,11 @@ window.onscroll = function()
 	}
 }
 
+
+
+
+
+
 var dir_for_desc;
 var i_for_desc = 0;
 var position_for_desc = 0;
@@ -190,8 +195,44 @@ function check_login()
 		alert("Please enter your password!");
 		return false;
 	}
+	if (form_login.check_code.value == "")
+	{
+		alert("Please enter checkcode!");
+		return false;
+	}
+	if (form_login.check_code.value != js_checkcode)
+	{
+		alert("Wrong checkcode! ");
+		change_code();
+		return false;
+	}
 	return true;
 }
+
+function change_code()
+{
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{
+		xmlhttp = new XMLHttpRequest();
+	}
+	else
+	{
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange = function()
+	{
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+		{
+			var str = xmlhttp.responseText.split(",");
+			js_checkcode = str[0];
+			document.getElementById("img_check_code").src="http://onlinebs-maindomain.stor.sinaapp.com/tmp/" + str[1];
+		}
+	}
+	xmlhttp.open("GET", "changecode.php", true);
+	xmlhttp.send();
+}
+
 
 function user_logout()
 {

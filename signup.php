@@ -6,6 +6,9 @@
 <link href="libs/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="my_css/mycss_signup.css">
 <link href="my_css/login.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+  var js_checkcode = "checkcode";
+</script>
 </head>
 
 <body>

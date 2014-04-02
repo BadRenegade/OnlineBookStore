@@ -2,7 +2,8 @@ var my_titlebar = document.getElementById("my_titlebar");
 var category_title = document.getElementById("category_title");
 var main_page_left = document.getElementById("main_page_left");
 
-//
+
+
 var category_title_fixed = false;
 window.onscroll = function()
 {
@@ -57,36 +58,7 @@ function showArrow()
 }
 
 
-function check_signup(){
-		if(form_signup.username.value==""){
-	        alert("请输入用户名!");
-   		    form_signup.username.select();
-			return(false);
-         }		
-		if(form_signup.password.value==""){
-	        alert("请输入用户密码!");
-			form_signup.password.select();
-			return(false);
-		 }	
-        if(form_signup.password.value!=form_signup.password_confirm.value){
-		    alert("您输入的密码和验证密码不符！");
-			form_signup.password_confirm.select();
-			return(false);
-		 }	
-		 
-       if(form_signup.email.value==""){
-			alert("请输入邮箱地址!");
-			form_signup.email.select();
-			return(false);
-		 }
-	   if(!check_email(form_signup.email.value)){
-			alert("邮箱地址格式不正确!");
-			form_signup.email.select();
-			return(false);
-		 } 
-		 
-		return(true);				 
-}	
+
 
 function check_email(email){
 	var strs=email;
@@ -111,6 +83,17 @@ function check_login()
 		alert("Please enter your password!");
 		return false;
 	}
+	if (form_login.check_code.value == "")
+	{
+		alert("Please enter checkcode!");
+		return false;
+	}
+	if (form_login.check_code.value != js_checkcode)
+	{
+		alert("Wrong checkcode! ");
+		change_code();
+		return false;
+	}
 	return true;
 }
 
@@ -119,11 +102,36 @@ function user_logout()
 	//window.open("deal_page/deal_logout.php", "", "", false);
 	window.location.href = "deal_page/deal_logout.php";
 }
+
+$('#login_modal').on('shown.bs.modal', function (e) {
+	//window.location.href = "checkCode.php";
+})
+
+
+function change_code()
+{
 	
-
-
-
-
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{
+		xmlhttp = new XMLHttpRequest();
+	}
+	else
+	{
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange = function()
+	{
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+		{
+			var str = xmlhttp.responseText.split(",");
+			js_checkcode = str[0];
+			document.getElementById("img_check_code").src="http://onlinebs-maindomain.stor.sinaapp.com/tmp/" + str[1];
+		}
+	}
+	xmlhttp.open("GET", "changecode.php", true);
+	xmlhttp.send();
+}
 
 
 

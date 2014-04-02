@@ -14,6 +14,9 @@ session_start();
 <link href="my_css/login.css" rel="stylesheet" type="text/css">
 <link href="my_css/categorybar.css" rel="stylesheet" type="text/css">
 <link href="my_css/categorylist.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+var js_checkcode = "checkcode";
+</script>
 </head>
 
 <body>

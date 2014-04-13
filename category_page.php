@@ -6,13 +6,20 @@ session_start();
 <head>
 <title>Book Store</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="libs/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-<link href="my_css/mycss_category.css" rel="stylesheet" type="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="lib/css/bootstrap.css" rel="stylesheet">
+<link href="my_css/mycss_main.css" rel="stylesheet" type="text/css">
 <link href="my_css/titlebar.css" rel="stylesheet" type="text/css">
 <link href="my_css/login.css" rel="stylesheet" type="text/css">
 <link href="my_css/categorybar.css" rel="stylesheet" type="text/css">
 <link href="my_css/categorylist.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src=lib/js/html5shiv.js></script>
+    <script src="lib/js/respond.min.js"></script>
+    <![endif]-->
+<script type="text/javascript">
+var js_checkcode = "checkcode";
+</script>
 </head>
 
 <body>
@@ -20,9 +27,6 @@ session_start();
 <?php include("include/login.php"); ?>
 <?php include("include/categorybar.php"); ?>
 <div id="main_page">
-  <div id="main_page_left">
-  <?php include("include/categorylist.php"); ?>
-  </div>
   <div id="main_page_right">
     <div id="content_books">
       <div style="height:40px; width:200px"></div>
@@ -123,8 +127,16 @@ session_start();
     </div>
   </div>
 </div>
-</body>
-<script type="text/javascript" src="libs/jqueryui/js/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="libs/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="lib/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="lib/js/stickUp.min.js"></script>
+<script type="text/javascript" type="text/javascript">
+    jQuery(function($) {
+        $(document).ready( function() {
+            $('#category_title').stickUp();
+        });
+    });
+</script>
+<script type="text/javascript" src="lib/js/bootstrap.js"></script>
 <script type="text/javascript" src="my_js/my_js.js"></script>
+</body>
 </html>

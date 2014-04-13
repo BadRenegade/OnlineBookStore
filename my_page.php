@@ -7,11 +7,15 @@ session_start();
 <head>
 <title>My Space</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="libs/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="lib/css/bootstrap.css" rel="stylesheet">
 <link href="my_css/mycss_myspace.css" rel="stylesheet" type="text/css">
 <link href="my_css/titlebar.css" rel="stylesheet" type="text/css">
 <link href="my_css/categorylist.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src=lib/js/html5shiv.js></script>
+    <script src="lib/js/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
@@ -19,6 +23,7 @@ session_start();
 
 
 <div id="category_title">
+  <div style="height: 48px; min-width: 440px">
   <div id="category_title_left">
     <div>Categories</div>
   </div>
@@ -32,15 +37,14 @@ session_start();
     <button id="myspace_setting_btn"> Setting </button>
   </div>
   <button id="shopping_cart_btn" onclick="goto_cart()"> Cart </button>
+  </div>
+  <?php include("include/categorylist.php"); ?>
   <!--
         <div id="category_title_right">
         	
         </div>--> 
 </div>
 <div id="main_page">
-  <div id="main_page_left">
-  <?php include("include/categorylist.php"); ?>
-  </div>
   <div id="main_page_right">
     <div id="myspace_orders" >
       <div style="height:40px; width:200px"></div>
@@ -132,8 +136,16 @@ session_start();
     </div>
   </div>
 </div>
-</body>
-<script type="text/javascript" src="libs/jqueryui/js/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="libs/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="lib/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="lib/js/stickUp.min.js"></script>
+<script type="text/javascript" type="text/javascript">
+    jQuery(function($) {
+        $(document).ready( function() {
+            $('#category_title').stickUp();
+        });
+    });
+</script>
+<script type="text/javascript" src="lib/js/bootstrap.js"></script>
 <script type="text/javascript" src="my_js/my_js.js"></script>
+</body>
 </html>

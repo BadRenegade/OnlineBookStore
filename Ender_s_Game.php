@@ -6,13 +6,17 @@ session_start();
 <head>
 <title>Single Book</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="lib/css/bootstrap.css" rel="stylesheet">
 <link href="my_css/single_book.css" rel="stylesheet" type="text/css">
 <link href="my_css/titlebar.css" rel="stylesheet" type="text/css">
 <link href="my_css/login.css" rel="stylesheet" type="text/css">
 <link href="my_css/categorybar.css" rel="stylesheet" type="text/css">
 <link href="my_css/categorylist.css" rel="stylesheet" type="text/css">
-<link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="libs/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src=lib/js/html5shiv.js></script>
+    <script src="lib/js/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
@@ -22,9 +26,6 @@ session_start();
 <?php include("include/categorybar.php"); ?>
    
 <div id="main_page">
-  <div id="main_page_left">
-  <?php include("include/categorylist.php"); ?>
-  </div>
   <div id="main_page_right">
     <div id="single_book_title">
       <div id="single_book_cover"> <img src="images/Ender's Game Big.jpg"/> </div>
@@ -181,9 +182,17 @@ session_start();
   <div style="height:50px"> </div>
   <div id="footer_link"> <span style="font-size:12px; color:#555;">©2013 Scatter Inc.</span> <a class="footer_linker_item" href="#">Site Terms of Service</a> <a class="footer_linker_item" href="#">Privacy Policy</a> <a class="footer_linker_item" href="#">Developers</a> <a class="footer_linker_item" href="#">About Us</a> </div>
 </div>
-</body>
-<script type="text/javascript" src="libs/jqueryui/js/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="libs/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="lib/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="lib/js/stickUp.min.js"></script>
+<script type="text/javascript" type="text/javascript">
+    jQuery(function($) {
+        $(document).ready( function() {
+            $('#category_title').stickUp();
+        });
+    });
+</script>
+<script type="text/javascript" src="lib/js/bootstrap.js"></script>
 <script type="text/javascript" src="my_js/my_js_single_2.js"></script>
 <script type="text/javascript" src="my_js/my_js_single.js"></script>
+</body>
 </html>

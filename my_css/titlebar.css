@@ -2,24 +2,24 @@
 
 #my_titlebar
 {
-	background-color:#f1f1f1;
-	height:60px; 
-	width:100%;
-	min-width:1000px;
+    background-color:#f1f1f1;
+    height:60px;
+    width:100%;
+    min-width:1000px;
 }
 
 #my_titlebar_left
 {
-	float:left; 
-	height:60px; 
-	min-width:240px;
+    float:left;
+    height:60px;
+    min-width:240px;
 }
 
 #my_titlebar_right
 {
-	float:right; 
-	height:60px; 
-	min-width:110px;
+    float:right;
+    height:60px;
+    min-width:110px;
 }
 /*
 #my_count_btn
@@ -31,102 +31,117 @@
 
 #headimg
 {
-	width:30px;
-	height:30px;
-	margin-right:10px;
-	margin-bottom:3px;
+    width:30px;
+    height:30px;
+    margin-right:10px;
+    margin-bottom:3px;
 }
 
 #my_titlebar_signin
 {
-	height:30px;
-	width:71px;
-	margin-right:40px;
-	margin-top:15px;
-	padding:0;
-	border:0;
-	background-image:url(../images/sign_in.png);
+    height:30px;
+    width:71px;
+    margin-right:40px;
+    margin-top:15px;
+    padding:0;
+    border:0;
+    background-image:url(../images/sign_in.png);
 }
 
 #my_titlebar_loginout
 {
-	color:#ffffff;
-	font-size:14px;
-	font-family: "Roboto", Arial, sans-serif;
-	height:30px;
-	width:71px;
-	margin-right:40px;
-	margin-top:15px;
-	padding:0;
-	border:0;
-	background-color:#4583ED;
+    color:#ffffff;
+    font-size:14px;
+    font-family: "Roboto", Arial, sans-serif;
+    height:30px;
+    width:71px;
+    margin-right:40px;
+    margin-top:15px;
+    padding:0;
+    border:0;
+    background-color:#4583ED;
 }
 
 
 
 #my_titlebar_middle
 {
-	height:60px; 
-	width:550px; 
-	position:relative; 
-	margin-left:0px; 
-	margin-right:0px; 
-	display:inline-block;
+    height:60px;
+    width:550px;
+    float: left;
 }
 
 #my_titlebar_middle_up
 {
-	height:15px;
-	width:550px;
+    height:15px;
+    width:550px;
 }
 
 #my_titlebar_middle_center
 {
-	height:30px;
-	width:550px;
+    height:30px;
+    width:550px;
 }
 
 #my_titlebar_searchform
 {
-	height:30px;
+    height:30px;
+}
+#my_titlebar_searchdiv
+{
+    float: left;
 }
 
 #my_titlebar_searchinput
 {
-	height:30px;
-	width:490px;
-	padding:0 8px 0 8px;
-	border:0;
-	margin:0;
-	color: #222;
-	font: 16px arial,sans-serif;
+    outline: none;
+    height:30px;
+    width:490px;
+    padding:0 8px 0 8px;
+    border:1px solid #f1f1f1;
+    margin:0;
+    color: #222;
+    font: 16px arial,sans-serif;
 }
+
+#my_titlebar_searchinput:focus
+{
+    outline: none;
+    height:30px;
+    width:490px;
+    padding:0 8px 0 8px;
+    border:1px solid #4585F0;
+    margin:0;
+    color: #222;
+    font: 16px arial,sans-serif;
+}
+
 #my_titlebar_searchbutton
 {
-	height:30px;
-	width:59px;
-	margin:0;
-	padding:0;
-	border:0;
-	background-image:url(../images/search.png)
+    height:30px;
+    width:59px;
+    margin:0;
+    padding:0;
+    border:0;
+    background-image:url(../images/search.png);
 }
 
 #my_titlebar_middle_down
 {
-	height:15px;
-	width:550px;
+    height:15px;
+    width:550px;
 }
 
 #my_title_search
 {
-	outline:none;
-	background: transparent;
-	border: none;
-	height: 20px;
-	margin-top: 4px;
-	padding: 0;
-	vertical-align: top;
-	width: 100%;
-	color: #222;
-	font: 16px arial,sans-serif;
+    outline:none;
+    background: transparent;
+    border: none;
+    height: 20px;
+    margin-top: 4px;
+    padding: 0;
+    vertical-align: top;
+    width: 100%;
+    color: #222;
+    font: 16px arial,sans-serif;
 }

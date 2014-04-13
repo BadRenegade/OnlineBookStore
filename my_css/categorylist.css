@@ -3,12 +3,11 @@
 
 #category_list
 {
-	opacity:1;
-	border:0;
-	clear: both;
-	outline-color:none;
-	margin:0;
-	padding:0;
+    float: left;
+    width: 200px;
+    opacity:0.9;
+    background-color:rgb(241, 241, 241);
+    box-shadow: 0px 1px 2px #8D9097;
 }
 .category_item
 {

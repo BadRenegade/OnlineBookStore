@@ -1,9 +1,9 @@
 <html>
 <head>
 <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Sign Up</title>
-<link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="libs/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="lib/css/bootstrap.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="my_css/mycss_signup.css">
 <link href="my_css/login.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">
@@ -67,12 +67,18 @@
   </div>
 </div>
 
-
-
-
-
-      
-<script type="text/javascript" src="libs/jqueryui/js/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="libs/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="lib/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="lib/js/stickUp.min.js"></script>
+<script type="text/javascript" type="text/javascript">
+    jQuery(function($) {
+        $(document).ready( function() {
+            $('#category_title').stickUp();
+        });
+    });
+</script>
+<script type="text/javascript" src="lib/js/bootstrap.js"></script>
 <script type="text/javascript" src="my_js/signup.js"></script>
+</body>
+
+
 </html>

@@ -4,32 +4,6 @@ var main_page_left = document.getElementById("main_page_left");
 
 
 
-var category_title_fixed = false;
-window.onscroll = function()
-{
-	var t = document.body.scrollTop;
-	if (t > 60)
-	{
-		category_title.style.position = "fixed";
-		main_page_left.style.position = "fixed";
-		main_page_left.style.marginTop = 48 + "px";		
-		my_titlebar.style.height = 0;
-		category_title_fixed = true;	
-	}
-	else
-	{	
-		if (category_title_fixed)
-		{
-			my_titlebar.style.height = 60 + "px";
-			category_title.style.position = "static";
-			main_page_left.style.position = "static";
-			main_page_left.style.marginTop = 0;	
-			
-		}					
-	}
-}
-
-
 function add_delivery_cost(obj)
 {
 	if (obj.value == '1')
